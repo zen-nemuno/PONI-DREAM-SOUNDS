@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(180deg, #f5f0ff, #e9f6ff);
+  text-align: center;
+  color: #444;
+  position: relative;
+  overflow-x: hidden;
+}
+
+header,
+nav,
+section,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  padding: 80px 20px 20px;
+}
+
+header img {
+  width: 320px;
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 50px;
+  color: #b08cff;
+  margin: 0;
+}
+
+.jp {
+  font-size: 22px;
+  color: #666;
+}
+
+.catch {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+}
+
+.hero {
+  padding: 100px 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 28px;
+  background: #ffb6e6;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 100px;
+  padding: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+.music-list {
+  padding: 60px 20px;
+}
+
+.music-card {
+  background: white;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.music-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.music-card h3 {
+  margin-top: 15px;
+}
+
+.download {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #b08cff;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+/* 雲 */
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  filter: blur(2px);
+  z-index: 0;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+}
+
+.cloud1 {
+  width: 180px;
+  height: 60px;
+  top: 120px;
+  left: 80px;
+}
+
+.cloud1::before {
+  width: 70px;
+  height: 70px;
+  left: 20px;
+  top: -25px;
+}
+
+.cloud1::after {
+  width: 90px;
+  height: 90px;
+  right: 20px;
+  top: -35px;
+}
+
+.cloud2 {
+  width: 220px;
+  height: 70px;
+  top: 300px;
+  right: 100px;
+}
+
+.cloud2::before {
+  width: 80px;
+  height: 80px;
+  left: 30px;
+  top: -30px;
+}
+
+.cloud2::after {
+  width: 100px;
+  height: 100px;
+  right: 30px;
+  top: -40px;
+}
+
+.cloud3 {
+  width: 160px;
+  height: 55px;
+  top: 700px;
+  left: 120px;
+}
+
+.cloud3::before {
+  width: 60px;
+  height: 60px;
+  left: 15px;
+  top: -20px;
+}
+
+.cloud3::after {
+  width: 80px;
+  height: 80px;
+  right: 20px;
+  top: -30px;
+}
+
+.cloud4 {
+  width: 200px;
+  height: 65px;
+  top: 950px;
+  right: 120px;
+}
+
+.cloud4::before {
+  width: 75px;
+  height: 75px;
+  left: 20px;
+  top: -25px;
+}
+
+.cloud4::after {
+  width: 95px;
+  height: 95px;
+  right: 25px;
+  top: -35px;
+}
