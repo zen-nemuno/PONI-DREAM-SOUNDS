@@ -2,19 +2,24 @@
 
 body {
   margin: 0;
-  font-family: sans-serif;
-  background: linear-gradient(180deg, #f5f0ff, #e9f6ff);
+  font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(210, 180, 255, 0.35), transparent 35%),
+    radial-gradient(circle at top right, rgba(170, 230, 255, 0.28), transparent 32%),
+    linear-gradient(180deg, #f7f2ff 0%, #eef7ff 52%, #fcfbff 100%);
   text-align: center;
-  color: #444;
+  color: #4d4a57;
   position: relative;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /* 雲の後ろにコンテンツを出す */
 header,
 nav,
 section,
-footer {
+footer,
+main {
   position: relative;
   z-index: 1;
 }
@@ -22,7 +27,7 @@ footer {
 /* ===== ヘッダー ===== */
 
 header {
-  padding: 70px 20px 10px;
+  padding: 72px 20px 16px;
 }
 
 header img {
@@ -31,6 +36,7 @@ header img {
   height: auto;
   display: block;
   margin: 0 auto;
+  filter: drop-shadow(0 10px 24px rgba(176, 140, 255, 0.18));
 }
 
 /* ===== ナビ ===== */
@@ -40,50 +46,77 @@ nav {
 }
 
 nav a {
-  margin: 0 14px;
+  display: inline-block;
+  margin: 0 8px;
+  padding: 11px 18px;
   text-decoration: none;
-  color: #666;
-  font-weight: bold;
-  transition: 0.2s;
+  color: #6f6782;
+  font-weight: 700;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 8px 20px rgba(120, 110, 160, 0.08);
+  backdrop-filter: blur(8px);
+  transition: 0.25s;
 }
 
 nav a:hover {
-  color: #b08cff;
+  color: #ffffff;
+  background: linear-gradient(135deg, #c7a2ff, #8fdcff);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(176, 140, 255, 0.22);
 }
 
 /* ===== トップ ===== */
 
 .hero {
-  padding: 100px 20px;
+  width: min(760px, calc(100% - 32px));
+  margin: 44px auto 0;
+  padding: 72px 24px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  box-shadow:
+    0 18px 40px rgba(135, 120, 170, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  box-sizing: border-box;
 }
 
 .hero h2 {
-  font-size: 42px;
-  margin-bottom: 16px;
+  font-size: clamp(36px, 6vw, 54px);
+  line-height: 1.1;
+  margin: 0 0 18px;
+  color: #7f63d8;
+  letter-spacing: 0.03em;
+  text-shadow: 0 6px 16px rgba(176, 140, 255, 0.16);
 }
 
 .hero p {
   font-size: 18px;
-  line-height: 1.8;
+  line-height: 1.9;
   max-width: 640px;
   margin: 0 auto;
+  color: #5f5a72;
 }
 
 .btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 14px 28px;
-  background: #ffb6e6;
+  margin-top: 26px;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #ffb8e8, #b48cff);
   color: white;
   text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: 0.2s;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  box-shadow: 0 12px 24px rgba(191, 140, 255, 0.24);
+  transition: 0.25s;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 28px rgba(176, 140, 255, 0.28);
 }
 
 /* ===== Music ===== */
@@ -96,28 +129,37 @@ nav a:hover {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 36px;
   align-items: start;
+  box-sizing: border-box;
 }
 
 .music-list h2 {
   grid-column: 1 / -1;
   margin-bottom: 10px;
-  font-size: 36px;
+  font-size: 38px;
+  color: #785fd0;
 }
 
 .music-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.82);
   padding: 34px;
   margin: 0;
   width: 100%;
   max-width: 100%;
-  border-radius: 24px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
   transition: 0.25s;
   box-sizing: border-box;
+  backdrop-filter: blur(10px);
 }
 
 .music-card:hover {
   transform: translateY(-6px);
+  box-shadow:
+    0 18px 38px rgba(150, 130, 190, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
 }
 
 .music-card img {
@@ -126,40 +168,47 @@ nav a:hover {
   max-width: 100%;
   display: block;
   margin: 0 auto;
-  border-radius: 14px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
   object-fit: contain;
 }
 
 .music-card h3 {
-  margin-top: 20px;
+  margin-top: 22px;
+  margin-bottom: 10px;
   font-size: 26px;
+  color: #61567b;
 }
 
 .music-card p {
-  font-size: 17px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666177;
 }
 
 .music-card audio {
   width: 100%;
-  margin-top: 12px;
+  margin-top: 14px;
+  border-radius: 999px;
 }
 
 .download {
   display: inline-block;
-  margin-top: 16px;
+  margin-top: 18px;
   padding: 12px 26px;
-  background: #b08cff;
+  background: linear-gradient(135deg, #b08cff, #8fdcff);
   color: white;
   text-decoration: none;
-  border-radius: 24px;
-  transition: 0.2s;
+  border-radius: 999px;
+  transition: 0.25s;
   font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(176, 140, 255, 0.2);
 }
 
 .download:hover {
-  background: #9c7cff;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 24px rgba(176, 140, 255, 0.28);
 }
 
 /* ===== Guide ===== */
@@ -169,29 +218,36 @@ nav a:hover {
 }
 
 .guide-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.84);
   max-width: 760px;
   margin: 0 auto;
-  padding: 40px 32px;
-  border-radius: 24px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  padding: 42px 34px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92);
   box-sizing: border-box;
+  backdrop-filter: blur(10px);
 }
 
 .guide-card h2 {
   font-size: 36px;
   margin-bottom: 24px;
+  color: #785fd0;
 }
 
 .guide-card h3 {
   font-size: 24px;
   margin-top: 32px;
   margin-bottom: 16px;
+  color: #61567b;
 }
 
 .guide-card p {
   font-size: 17px;
   line-height: 1.9;
+  color: #5f5a72;
 }
 
 .guide-list {
@@ -204,37 +260,39 @@ nav a:hover {
   font-size: 16px;
   line-height: 1.9;
   margin-bottom: 6px;
+  color: #5f5a72;
 }
 
 .credit-text {
-  font-weight: bold;
-  line-height: 1.8;
+  font-weight: 700;
+  line-height: 1.9;
 }
 
 /* ===== フッター ===== */
 
 footer {
   margin-top: 100px;
-  padding: 20px;
+  padding: 22px;
   font-size: 14px;
-  color: #888;
+  color: #8b84a0;
 }
 
 /* ===== 雲 ===== */
 
 .cloud {
   position: absolute;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.56);
   border-radius: 999px;
   filter: blur(2px);
   z-index: 0;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.22);
 }
 
 .cloud::before,
 .cloud::after {
   content: "";
   position: absolute;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.56);
   border-radius: 50%;
 }
 
@@ -348,13 +406,15 @@ footer {
   }
 
   nav a {
-    display: inline-block;
-    margin: 6px 10px;
+    margin: 6px 8px;
     font-size: 15px;
+    padding: 10px 16px;
   }
 
   .hero {
-    padding: 70px 16px;
+    width: calc(100% - 32px);
+    padding: 56px 20px;
+    border-radius: 24px;
   }
 
   .hero h2 {
@@ -381,6 +441,7 @@ footer {
   .music-card {
     padding: 22px;
     max-width: 100%;
+    border-radius: 22px;
   }
 
   .music-card img {
@@ -409,7 +470,7 @@ footer {
 
   .guide-card {
     padding: 28px 22px;
-    border-radius: 18px;
+    border-radius: 20px;
   }
 
   .guide-card h2 {
@@ -518,6 +579,13 @@ footer {
 /* ===== スマホ ===== */
 
 @media (max-width: 480px) {
+  body {
+    background:
+      radial-gradient(circle at top left, rgba(210, 180, 255, 0.28), transparent 38%),
+      radial-gradient(circle at top right, rgba(170, 230, 255, 0.2), transparent 36%),
+      linear-gradient(180deg, #f7f2ff 0%, #eef7ff 52%, #fcfbff 100%);
+  }
+
   header {
     padding: 40px 12px 8px;
   }
@@ -528,12 +596,15 @@ footer {
   }
 
   nav a {
-    margin: 6px 8px;
+    margin: 6px 6px;
     font-size: 14px;
+    padding: 9px 14px;
   }
 
   .hero {
-    padding: 56px 16px;
+    width: calc(100% - 24px);
+    padding: 46px 16px;
+    border-radius: 20px;
   }
 
   .hero h2 {
