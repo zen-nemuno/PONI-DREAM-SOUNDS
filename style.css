@@ -57,6 +57,18 @@ nav a:hover {
   padding: 100px 20px;
 }
 
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
 .btn {
   display: inline-block;
   margin-top: 20px;
@@ -148,6 +160,55 @@ nav a:hover {
 
 .download:hover {
   background: #9c7cff;
+}
+
+/* ===== Guide ===== */
+
+.guide-section {
+  padding: 60px 20px;
+}
+
+.guide-card {
+  background: white;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  border-radius: 24px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.guide-card h2 {
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+
+.guide-card h3 {
+  font-size: 24px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.guide-card p {
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.guide-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.guide-list li {
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 6px;
+}
+
+.credit-text {
+  font-weight: bold;
+  line-height: 1.8;
 }
 
 /* ===== フッター ===== */
@@ -296,6 +357,15 @@ footer {
     padding: 70px 16px;
   }
 
+  .hero h2 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    max-width: 520px;
+  }
+
   .music-list {
     width: min(700px, calc(100% - 32px));
     grid-template-columns: 1fr;
@@ -331,6 +401,28 @@ footer {
   .download {
     padding: 10px 20px;
     font-size: 14px;
+  }
+
+  .guide-section {
+    padding: 40px 16px;
+  }
+
+  .guide-card {
+    padding: 28px 22px;
+    border-radius: 18px;
+  }
+
+  .guide-card h2 {
+    font-size: 28px;
+  }
+
+  .guide-card h3 {
+    font-size: 21px;
+  }
+
+  .guide-card p,
+  .guide-list li {
+    font-size: 15px;
   }
 
   footer {
@@ -440,6 +532,27 @@ footer {
     font-size: 14px;
   }
 
+  .hero {
+    padding: 56px 16px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 260px;
+    box-sizing: border-box;
+    padding: 12px 18px;
+  }
+
   .music-list {
     width: calc(100% - 24px);
     padding: 32px 12px;
@@ -473,6 +586,32 @@ footer {
     width: 100%;
     box-sizing: border-box;
     padding: 12px 16px;
+  }
+
+  .guide-section {
+    padding: 32px 12px;
+  }
+
+  .guide-card {
+    padding: 22px 16px;
+    border-radius: 16px;
+  }
+
+  .guide-card h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  .guide-card h3 {
+    font-size: 18px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  .guide-card p,
+  .guide-list li {
+    font-size: 14px;
+    line-height: 1.8;
   }
 
   footer {
