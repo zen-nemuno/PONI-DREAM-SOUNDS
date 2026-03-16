@@ -1,3 +1,5 @@
+/* ===== 基本 ===== */
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -8,6 +10,7 @@ body {
   overflow-x: hidden;
 }
 
+/* 雲の後ろにコンテンツを出す */
 header,
 nav,
 section,
@@ -16,44 +19,39 @@ footer {
   z-index: 1;
 }
 
+/* ===== ヘッダー ===== */
+
 header {
-  padding: 80px 20px 20px;
+  padding: 70px 20px 10px;
 }
 
 header img {
-  width: 320px;
+  width: 340px;
   max-width: 80%;
   height: auto;
   display: block;
   margin: 0 auto;
 }
 
-h1 {
-  font-size: 50px;
-  color: #b08cff;
-  margin: 0;
-}
-
-.jp {
-  font-size: 22px;
-  color: #666;
-}
-
-.catch {
-  margin-top: 10px;
-  font-size: 18px;
-}
+/* ===== ナビ ===== */
 
 nav {
   margin-top: 20px;
 }
 
 nav a {
-  margin: 0 10px;
+  margin: 0 14px;
   text-decoration: none;
-  color: #555;
+  color: #666;
   font-weight: bold;
+  transition: 0.2s;
 }
+
+nav a:hover {
+  color: #b08cff;
+}
+
+/* ===== トップ ===== */
 
 .hero {
   padding: 100px 20px;
@@ -68,7 +66,64 @@ nav a {
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
+  transition: 0.2s;
 }
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+/* ===== Music ===== */
+
+.music-list {
+  padding: 60px 20px;
+}
+
+.music-list h2 {
+  margin-bottom: 30px;
+}
+
+.music-card {
+  background: white;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 460px;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  transition: 0.25s;
+}
+
+.music-card:hover {
+  transform: translateY(-6px);
+}
+
+.music-card img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.music-card h3 {
+  margin-top: 18px;
+}
+
+.download {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 22px;
+  background: #b08cff;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.download:hover {
+  background: #9c7cff;
+}
+
+/* ===== フッター ===== */
 
 footer {
   margin-top: 100px;
@@ -77,42 +132,11 @@ footer {
   color: #888;
 }
 
-.music-list {
-  padding: 60px 20px;
-}
+/* ===== 雲 ===== */
 
-.music-card {
-  background: white;
-  padding: 30px;
-  margin: 40px auto;
-  max-width: 400px;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-}
-
-.music-card img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.music-card h3 {
-  margin-top: 15px;
-}
-
-.download {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #b08cff;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-}
-
-/* 雲 */
 .cloud {
   position: absolute;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255,255,255,0.5);
   border-radius: 999px;
   filter: blur(2px);
   z-index: 0;
@@ -122,15 +146,17 @@ footer {
 .cloud::after {
   content: "";
   position: absolute;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255,255,255,0.5);
   border-radius: 50%;
 }
+
+/* 雲１ */
 
 .cloud1 {
   width: 180px;
   height: 60px;
   top: 120px;
-  left: 80px;
+  left: 90px;
 }
 
 .cloud1::before {
@@ -147,11 +173,13 @@ footer {
   top: -35px;
 }
 
+/* 雲２ */
+
 .cloud2 {
   width: 220px;
   height: 70px;
-  top: 300px;
-  right: 100px;
+  top: 280px;
+  right: 120px;
 }
 
 .cloud2::before {
@@ -167,6 +195,8 @@ footer {
   right: 30px;
   top: -40px;
 }
+
+/* 雲３ */
 
 .cloud3 {
   width: 160px;
@@ -189,10 +219,12 @@ footer {
   top: -30px;
 }
 
+/* 雲４ */
+
 .cloud4 {
   width: 200px;
   height: 65px;
-  top: 950px;
+  top: 960px;
   right: 120px;
 }
 
