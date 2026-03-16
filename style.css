@@ -111,8 +111,12 @@ nav a:hover {
 .music-card img {
   width: 100%;
   height: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
   border-radius: 14px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  object-fit: contain;
 }
 
 .music-card h3 {
@@ -309,6 +313,13 @@ footer {
     max-width: 100%;
   }
 
+  .music-card img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+
   .music-card h3 {
     font-size: 22px;
   }
@@ -441,6 +452,13 @@ footer {
   .music-card {
     padding: 18px;
     border-radius: 16px;
+  }
+
+  .music-card img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
   }
 
   .music-card h3 {
