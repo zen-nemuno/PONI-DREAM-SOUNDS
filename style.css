@@ -24,25 +24,51 @@ main {
   z-index: 1;
 }
 
+/* ===== 背景のふんわり光 ===== */
+
+.bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.5;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glow1 {
+  width: 280px;
+  height: 280px;
+  background: rgba(201, 167, 255, 0.45);
+  top: 40px;
+  left: -60px;
+}
+
+.glow2 {
+  width: 320px;
+  height: 320px;
+  background: rgba(157, 221, 255, 0.38);
+  top: 220px;
+  right: -80px;
+}
+
 /* ===== ヘッダー ===== */
 
 header {
-  padding: 72px 20px 16px;
+  padding: 32px 20px 6px;
 }
 
 header img {
-  width: 340px;
-  max-width: 80%;
+  width: min(520px, 92%);
   height: auto;
   display: block;
   margin: 0 auto;
-  filter: drop-shadow(0 10px 24px rgba(176, 140, 255, 0.18));
+  filter: drop-shadow(0 12px 28px rgba(176, 140, 255, 0.2));
 }
 
 /* ===== ナビ ===== */
 
 nav {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 nav a {
@@ -71,8 +97,8 @@ nav a:hover {
 
 .hero {
   width: min(760px, calc(100% - 32px));
-  margin: 44px auto 0;
-  padding: 72px 24px;
+  margin: 26px auto 0;
+  padding: 64px 24px;
   border-radius: 32px;
   background: rgba(255, 255, 255, 0.58);
   border: 1px solid rgba(255, 255, 255, 0.78);
@@ -83,6 +109,16 @@ nav a:hover {
   box-sizing: border-box;
 }
 
+.hero-mini {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9c8ed4;
+}
+
+.hero h1,
 .hero h2 {
   font-size: clamp(36px, 6vw, 54px);
   line-height: 1.1;
@@ -92,6 +128,7 @@ nav a:hover {
   text-shadow: 0 6px 16px rgba(176, 140, 255, 0.16);
 }
 
+.hero-text,
 .hero p {
   font-size: 18px;
   line-height: 1.9;
@@ -100,9 +137,13 @@ nav a:hover {
   color: #5f5a72;
 }
 
+.hero-buttons {
+  margin-top: 26px;
+}
+
 .btn {
   display: inline-block;
-  margin-top: 26px;
+  margin-top: 0;
   padding: 14px 30px;
   background: linear-gradient(135deg, #ffb8e8, #b48cff);
   color: white;
@@ -117,6 +158,34 @@ nav a:hover {
 .btn:hover {
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 16px 28px rgba(176, 140, 255, 0.28);
+}
+
+.hero-buttons .btn + .btn {
+  margin-left: 14px;
+}
+
+.btn.secondary {
+  background: linear-gradient(135deg, #d9b8ff, #b48cff);
+}
+
+.hero-youtube {
+  margin-top: 22px;
+  font-size: 15px;
+  color: #7b7490;
+  line-height: 1.8;
+}
+
+.hero-youtube a {
+  color: #8a6be8;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px dashed #b08cff;
+  transition: 0.2s;
+}
+
+.hero-youtube a:hover {
+  color: #ff8acb;
+  border-bottom-color: #ff8acb;
 }
 
 /* ===== Music ===== */
@@ -268,6 +337,19 @@ nav a:hover {
   line-height: 1.9;
 }
 
+.credit-text a {
+  color: #8a6be8;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px dashed #b08cff;
+  transition: 0.2s;
+}
+
+.credit-text a:hover {
+  color: #ff8acb;
+  border-bottom-color: #ff8acb;
+}
+
 /* ===== フッター ===== */
 
 footer {
@@ -392,16 +474,16 @@ footer {
 
 @media (max-width: 900px) {
   header {
-    padding: 50px 16px 10px;
+    padding: 28px 16px 6px;
   }
 
   header img {
-    width: 280px;
-    max-width: 90%;
+    width: min(420px, 94%);
+    max-width: 94%;
   }
 
   nav {
-    margin-top: 16px;
+    margin-top: 10px;
     padding: 0 12px;
   }
 
@@ -413,17 +495,24 @@ footer {
 
   .hero {
     width: calc(100% - 32px);
-    padding: 56px 20px;
+    margin-top: 22px;
+    padding: 52px 20px;
     border-radius: 24px;
   }
 
+  .hero h1,
   .hero h2 {
     font-size: 34px;
   }
 
+  .hero-text,
   .hero p {
     font-size: 16px;
     max-width: 520px;
+  }
+
+  .hero-buttons .btn + .btn {
+    margin-left: 10px;
   }
 
   .music-list {
@@ -440,7 +529,6 @@ footer {
 
   .music-card {
     padding: 22px;
-    max-width: 100%;
     border-radius: 22px;
   }
 
@@ -587,12 +675,12 @@ footer {
   }
 
   header {
-    padding: 40px 12px 8px;
+    padding: 22px 12px 4px;
   }
 
   header img {
-    width: 240px;
-    max-width: 92%;
+    width: min(340px, 96%);
+    max-width: 96%;
   }
 
   nav a {
@@ -603,25 +691,37 @@ footer {
 
   .hero {
     width: calc(100% - 24px);
-    padding: 46px 16px;
+    margin-top: 18px;
+    padding: 40px 16px;
     border-radius: 20px;
   }
 
+  .hero h1,
   .hero h2 {
     font-size: 28px;
     margin-bottom: 12px;
   }
 
+  .hero-text,
   .hero p {
     font-size: 15px;
     line-height: 1.8;
   }
 
-  .btn {
+  .hero-buttons {
+    margin-top: 22px;
+  }
+
+  .hero-buttons .btn {
+    display: block;
     width: 100%;
     max-width: 260px;
     box-sizing: border-box;
-    padding: 12px 18px;
+    margin: 0 auto 12px;
+  }
+
+  .hero-buttons .btn + .btn {
+    margin-left: auto;
   }
 
   .music-list {
