@@ -93,12 +93,34 @@ nav a:hover {
   box-shadow: 0 10px 22px rgba(176, 140, 255, 0.22);
 }
 
+/* ===== 共通タイトル外出し ===== */
+
+.page-title {
+  margin: 0 0 10px;
+  font-size: 38px;
+  color: #785fd0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-section {
+  width: min(900px, calc(100% - 32px));
+  margin: 40px auto 0;
+}
+
+.guide-section {
+  width: min(900px, calc(100% - 32px));
+  margin: 40px auto 0;
+  padding: 0 20px 60px;
+  box-sizing: border-box;
+}
+
 /* ===== トップ ===== */
 
 .hero {
-  width: min(760px, calc(100% - 32px));
-  margin: 26px auto 0;
-  padding: 64px 24px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 56px 24px 64px;
   border-radius: 32px;
   background: rgba(255, 255, 255, 0.58);
   border: 1px solid rgba(255, 255, 255, 0.78);
@@ -281,10 +303,6 @@ nav a:hover {
 }
 
 /* ===== Guide ===== */
-
-.guide-section {
-  padding: 60px 20px;
-}
 
 .guide-card {
   background: rgba(255, 255, 255, 0.84);
@@ -493,9 +511,19 @@ footer {
     padding: 10px 16px;
   }
 
+  .page-title {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .hero-section,
+  .guide-section {
+    margin-top: 28px;
+  }
+
   .hero {
-    width: calc(100% - 32px);
-    margin-top: 22px;
+    width: 100%;
+    margin-top: 0;
     padding: 52px 20px;
     border-radius: 24px;
   }
@@ -553,7 +581,7 @@ footer {
   }
 
   .guide-section {
-    padding: 40px 16px;
+    padding: 0 16px 40px;
   }
 
   .guide-card {
@@ -689,9 +717,19 @@ footer {
     padding: 9px 14px;
   }
 
-  .hero {
+  .page-title {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .hero-section,
+  .guide-section {
     width: calc(100% - 24px);
-    margin-top: 18px;
+    margin-top: 22px;
+  }
+
+  .hero {
+    width: 100%;
+    margin-top: 0;
     padding: 40px 16px;
     border-radius: 20px;
   }
@@ -760,7 +798,7 @@ footer {
   }
 
   .guide-section {
-    padding: 32px 12px;
+    padding: 0 12px 32px;
   }
 
   .guide-card {
